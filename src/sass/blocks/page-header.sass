@@ -1,0 +1,10 @@
+.page-header
+  background: #ddd
+  &::before,
+  &::after
+    content: ''
+    display: inline-block
+  &::before
+    +retina-sprite($icon-check-group)
+  &::after
+    +sprite($icon-check)

@@ -1,0 +1,75 @@
+=text-hide
+  border: 0
+  font: 0/0 a
+  text-shadow: none
+  color: transparent
+  background-color: transparent
+
+
+=list-clear
+  padding: 0
+  margin: 0
+  list-style: none
+
+
+=btn-clear
+  padding: 0
+  outline: none
+  border: none
+  background-color: transparent
+
+
+=text-no-overflow
+  overflow: hidden
+  text-overflow: ellipsis
+
+
+// Clear the float on any element.
+=clearfix
+  &::after
+    display: table
+    clear: both
+    content: ''
+
+
+// Fix no working `-webkit-text-size-adjust: 100%` in Android.
+=fix-text-size-adjust
+  background-image: linear-gradient(transparent, transparent)
+
+
+// Set element size
+=size($width, $height: $width)
+  width: $width
+  height: $height
+
+
+// Set margin on left & right
+=margin-x($margin)
+  margin-left: $margin
+  margin-right: $margin
+
+
+// Set margin on top & bottom
+=margin-y($margin)
+  margin-top: $margin
+  margin-bottom: $margin
+
+
+// Set pading on left & right
+=padding-x($padding)
+  padding-left: $padding
+  padding-right: $padding
+
+
+// Set padding on top & bottom
+=padding-y($padding)
+  padding-top: $padding
+  padding-bottom: $padding
+
+
+// Set one static retina image
+=retinaBackground($image, $ext: 'png')
+  background-image: url('../img/' + $image + '.' + $ext)
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    background-image: url('../img/' + $image + '@2x.' + $ext)
