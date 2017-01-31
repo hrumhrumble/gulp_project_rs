@@ -1,3 +1,12 @@
+### Настройка
+```sh
+$ git clone git@github.com:ins77/gulp_project_rs.git my-project
+$ cd my-project
+$ git remote rm origin
+$ rm README.md
+$ npm install
+```
+
 ## Структура папок и файлов
 ```
 ├── src/                       # Исходники
